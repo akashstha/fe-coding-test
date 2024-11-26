@@ -26,6 +26,9 @@ export default function Home() {
           <Link href="/fetch">
             <div className="border-black border w-full p-4">Fetch</div>
           </Link>
+          <Link href="/form">
+            <div className="border-black border w-full p-4">Form</div>
+          </Link>
         </div>
       </div>
     </div>
