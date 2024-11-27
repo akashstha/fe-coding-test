@@ -3,13 +3,22 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 type BankAccount = {
   accountNumber: string;
-  name: string;
   balance: number;
+  name: string;
 };
+
+type Loan = {
+  accountNumber: string;
+  name: string;
+  nextPaymentDue: string;
+  paymentAmount: number;
+};
+
+type Account = BankAccount | Loan;
 
 type Profile = {
   name: string;
-  accounts: BankAccount[];
+  accounts: Account[];
 };
 
 export default function handler(
@@ -20,19 +29,16 @@ export default function handler(
     res.status(405).json({ message: "Method not allowed" });
   }
   res.status(200).json({
-    name: "Jonathan Doe",
+    name: "Jonathan",
     accounts: [
+      { accountNumber: "1", balance: 100.0, name: "Checking" },
+      { accountNumber: "2", balance: 1000.0, name: "Savings" },
       {
-        accountNumber: "1234567890",
-        name: "Checking",
-        balance: 100.0,
+        accountNumber: "3",
+        name: "Mortgage",
+        nextPaymentDue: "01-01-2025",
+        paymentAmount: 1000,
       },
-      {
-        accountNumber: "0987654321",
-        name: "Savings",
-        balance: 1000.0,
-      },
-      { accountNumber: "1111111111", name: "CD", balance: -50 },
     ],
   });
 }

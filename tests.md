@@ -7,11 +7,4 @@
 - NextJS test: create a new page to display basic bank account information. Have them fetch the data in NextJS methods, choosing the right one. Maybe give them a Figma file for it.
 - E2E testing test: Write a PW test for the form you just created.s
 
-
 redo numbers to a functional component, make more bugs and dead code
-
-remove note about no hidden bugs
-
-add api for form task
-
-give type in figma task data

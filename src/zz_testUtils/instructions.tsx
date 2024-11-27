@@ -1,3 +1,4 @@
+import { AccountsTask } from "@/components/Accounts";
 import { Numbers } from "@/components/CodeReview";
 import { FetchTask } from "@/components/Fetch";
 import { FormTask } from "@/components/Form";
@@ -55,11 +56,23 @@ export const tests: Record<string, Test> = {
           Your task is to create a form that allows a user to input their name,
           email, and phone number.
         </p>
+        <>
+          You'll submit the form to the following endpoint:
+          http://localhost:3000/api/form
+        </>
         <p>
           When the form is submitted successfully, display the data in a list
           below the form.
         </p>
       </div>
+    ),
+  },
+  accountsReact: {
+    Component: AccountsTask,
+    instructions: (
+      <p>
+        Check the <b>instructions/Accounts.md</b> file for all the details.
+      </p>
     ),
   },
 };

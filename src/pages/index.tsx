@@ -20,6 +20,12 @@ export default function Home() {
       <div className="w-4/6">
         <h1 className="text-4xl">Welcome to the First Horizon Coding Test!</h1>
         <div className="flex flex-col gap-4 mt-4">
+          {/* Note: this needs to be accountsReact because we offer the candidate
+          the opportunity to create the page themselves, so because this
+          is a dynamic route, we need to make it different. */}
+          <Link href="/accountsReact">
+            <div className="border-black border w-full p-4">Accounts</div>
+          </Link>
           <Link href="/codeReview">
             <div className="border-black border w-full p-4">Code Review</div>
           </Link>
