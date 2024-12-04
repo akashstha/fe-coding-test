@@ -9,7 +9,7 @@ type Input = {
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Input | ApiError>
+  res: NextApiResponse<Input | ApiError>,
 ) {
   if (req.method !== "POST") {
     res.status(405).json({ message: "Method not allowed" });

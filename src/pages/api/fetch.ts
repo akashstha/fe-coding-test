@@ -15,7 +15,7 @@ type AccountInfo = {
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<AccountInfo | ApiError>
+  res: NextApiResponse<AccountInfo | ApiError>,
 ) {
   if (req.method !== "GET") {
     res.status(405).json({ message: "Method not allowed" });

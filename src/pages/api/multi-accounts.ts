@@ -23,7 +23,7 @@ type Profile = {
 
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Profile | ApiError>
+  res: NextApiResponse<Profile | ApiError>,
 ) {
   if (req.method !== "GET") {
     res.status(405).json({ message: "Method not allowed" });
