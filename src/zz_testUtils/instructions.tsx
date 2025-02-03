@@ -85,6 +85,16 @@ export const tests: Record<string, Test> = {
             api/form
           </b>
         </>
+        <p>The API accepts the following fields:</p>
+        <ul className="ml-8">
+          <li>name: string</li>
+          <li>email: string</li>
+          <li>phone: string</li>
+        </ul>
+        <p>
+          You can check the API implementation in <b>src/pages/api/form.ts</b>{" "}
+          if you'd like.
+        </p>
         <p>
           When the form is submitted successfully, display the data in a list
           below the form.
