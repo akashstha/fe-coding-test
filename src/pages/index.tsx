@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import localFont from "next/font/local";
 import Link from "next/link";
 
@@ -35,6 +35,9 @@ export default function Home() {
           </Link>
           <Link href="/form">
             <div className="border-black border w-full p-4">Form</div>
+          </Link>
+          <Link href="/list">
+            <div className="border-black border w-full p-4">List</div>
           </Link>
         </div>
       </div>

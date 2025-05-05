@@ -3,6 +3,7 @@ import { AccountsTask } from "@/components/Accounts";
 import { Numbers } from "@/components/CodeReview";
 import { FetchTask } from "@/components/Fetch";
 import { FormTask } from "@/components/Form";
+import { List } from "@/components/List";
 import React, { ComponentType, ReactNode } from "react";
 
 type Test = {
@@ -114,6 +115,51 @@ export const tests: Record<string, Test> = {
         </b>{" "}
         file for all the details.
       </p>
+    ),
+  },
+  // New test for mid-level React engineers: Fetching, State, Filtering
+  list: {
+    Component: List, // Use the placeholder for now
+    instructions: (
+      <div className="space-y-4">
+        <p>
+          Please implement the component logic in:
+          <br />
+          <b>
+            src/components/
+            <wbr />
+            List.tsx
+          </b>
+        </p>
+        <p>Your task is to:</p>
+        <ul className="list-disc ml-8 space-y-1">
+          <li>
+            Fetch a list of posts from the JSONPlaceholder API endpoint:
+            <br />
+            <a
+              href="https://jsonplaceholder.typicode.com/posts"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline"
+            >
+              https://jsonplaceholder.typicode.com/posts
+            </a>
+          </li>
+          <li>Display the fetched posts (e.g., title and body) in a list.</li>
+          <li>Show a loading indicator while the data is being fetched.</li>
+          <li>
+            Display a user-friendly error message if the API request fails.
+          </li>
+          <li>
+            Add an input field that allows users to filter the displayed posts
+            by their title (case-insensitive).
+          </li>
+        </ul>
+        <p>
+          Focus on clear state management, handling asynchronous operations
+          correctly, and providing good user feedback (loading/error states).
+        </p>
+      </div>
     ),
   },
 };
