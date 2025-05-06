@@ -1,8 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import { AccountsTask } from "@/components/Accounts";
-import { Numbers } from "@/components/CodeReview";
+import { FilterableList } from "@/components/CodeReview2";
 import { FetchTask } from "@/components/Fetch";
 import { FormTask } from "@/components/Form";
+import { WelcomeToggler } from "@/components/CodeReview1";
 import { List } from "@/components/List";
 import React, { ComponentType, ReactNode } from "react";
 
@@ -12,8 +13,8 @@ type Test = {
 };
 
 export const tests: Record<string, Test> = {
-  codeReview: {
-    Component: Numbers,
+  codeReview2: {
+    Component: FilterableList,
     instructions: (
       <div className="space-y-4">
         <p>
@@ -29,6 +30,12 @@ export const tests: Record<string, Test> = {
           Take a look at the code as if you were reviewing it for a pull
           request. Tell us any feedback you'd give the author.
         </p>
+        <p>This component should implement the following user story:</p>
+        <ul className="ml-8">
+          <code>
+            As a user, I want to be able to filter the list of items by name.
+          </code>
+        </ul>
       </div>
     ),
   },
@@ -117,7 +124,33 @@ export const tests: Record<string, Test> = {
       </p>
     ),
   },
-  // New test for mid-level React engineers: Fetching, State, Filtering
+  codeReview1: {
+    Component: WelcomeToggler,
+    instructions: (
+      <div className="space-y-4">
+        <p>
+          Let's review some code! Please open the WelcomeToggler component:
+          <br />
+          <b>
+            src/components/
+            <wbr />
+            CodeReview1.tsx
+          </b>
+        </p>
+        <p>You can see the component running on the right side.</p>
+        <p>
+          Imagine you're reviewing this code for a pull request from a teammate.
+          Read through the code and tell us what feedback you would give. What
+          could be improved? Are there any bugs?
+        </p>
+        <p>This component is supposed to implement the following user story:</p>
+        <blockquote className="ml-4 border-l-4 pl-4 italic">
+          "As a user, I want to click a button labeled 'Toggle Message' to show
+          or hide a simple welcome message on the screen."
+        </blockquote>
+      </div>
+    ),
+  },
   list: {
     Component: List, // Use the placeholder for now
     instructions: (

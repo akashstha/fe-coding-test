@@ -27,8 +27,11 @@ export default function Home() {
           <Link href="/accountsReact">
             <div className="border-black border w-full p-4">Accounts</div>
           </Link>
-          <Link href="/codeReview">
-            <div className="border-black border w-full p-4">Code Review</div>
+          <Link href="/codeReview1">
+            <div className="border-black border w-full p-4">Code Review 1</div>
+          </Link>
+          <Link href="/codeReview2">
+            <div className="border-black border w-full p-4">Code Review 2</div>
           </Link>
           <Link href="/fetch">
             <div className="border-black border w-full p-4">Fetch</div>
