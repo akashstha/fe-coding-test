@@ -13,6 +13,33 @@ type Test = {
 };
 
 export const tests: Record<string, Test> = {
+  codeReview1: {
+    Component: WelcomeToggler,
+    instructions: (
+      <div className="space-y-4">
+        <p>
+          Let's review some code! Please open the WelcomeToggler component:
+          <br />
+          <b>
+            src/components/
+            <wbr />
+            CodeReview1.tsx
+          </b>
+        </p>
+        <p>You can see the component running on the right side.</p>
+        <p>
+          Imagine you're reviewing this code for a pull request from a teammate.
+          Read through the code and tell us what feedback you would give. What
+          could be improved? Are there any bugs?
+        </p>
+        <p>This component is supposed to implement the following user story:</p>
+        <blockquote className="ml-4 border-l-4 pl-4 italic">
+          "As a user, I want to click a button labeled 'Toggle Message' to show
+          or hide a simple welcome message on the screen."
+        </blockquote>
+      </div>
+    ),
+  },
   codeReview2: {
     Component: FilterableList,
     instructions: (
@@ -22,7 +49,7 @@ export const tests: Record<string, Test> = {
           <b>
             src/components/
             <wbr />
-            CodeReview.tsx
+            CodeReview2.tsx
           </b>
         </p>
         <p>It's is displayed on the right side.</p>
@@ -104,7 +131,7 @@ export const tests: Record<string, Test> = {
           if you'd like.
         </p>
         <p>
-          When the form is submitted successfully, display the data in a list
+          When the form is submitted successfully, display a success message
           below the form.
         </p>
       </div>
@@ -124,33 +151,7 @@ export const tests: Record<string, Test> = {
       </p>
     ),
   },
-  codeReview1: {
-    Component: WelcomeToggler,
-    instructions: (
-      <div className="space-y-4">
-        <p>
-          Let's review some code! Please open the WelcomeToggler component:
-          <br />
-          <b>
-            src/components/
-            <wbr />
-            CodeReview1.tsx
-          </b>
-        </p>
-        <p>You can see the component running on the right side.</p>
-        <p>
-          Imagine you're reviewing this code for a pull request from a teammate.
-          Read through the code and tell us what feedback you would give. What
-          could be improved? Are there any bugs?
-        </p>
-        <p>This component is supposed to implement the following user story:</p>
-        <blockquote className="ml-4 border-l-4 pl-4 italic">
-          "As a user, I want to click a button labeled 'Toggle Message' to show
-          or hide a simple welcome message on the screen."
-        </blockquote>
-      </div>
-    ),
-  },
+
   list: {
     Component: List, // Use the placeholder for now
     instructions: (
