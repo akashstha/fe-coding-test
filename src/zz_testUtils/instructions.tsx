@@ -186,7 +186,7 @@ export const tests: Record<string, Test> = {
           </li>
           <li>
             Add an input field that allows users to filter the displayed posts
-            by their title (case-insensitive).
+            by their user id through a dropdown.
           </li>
         </ul>
         <p>
